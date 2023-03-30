@@ -93,8 +93,7 @@ Call the [Email.ComposeAsync](https://learn.microsoft.com/en-us/dotnet/api/micro
   ```
 
   Refer to the following topic on learn.microsoft.com for more information: [Email](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/communication/email?view=net-maui-7.0&tabs=ios).
-  
-* 
+
 
 ## Files to Review
 

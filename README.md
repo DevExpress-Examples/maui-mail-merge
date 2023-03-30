@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1157166)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# Mail Merge
+# DevExpress .NET MAUI Controls - Send Template Messages with Mail Merge
 
 This example uses Mail Merge to send emails. Data placeholders in an email template obtain their values from database records. Mail Merge functionality is included in our [Office File API](https://www.devexpress.com/products/net/office-file-api/) subscription.
 

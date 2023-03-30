@@ -21,50 +21,50 @@ Use the [RichEditDocumentServer](https://docs.devexpress.com/OfficeFileAPI/DevEx
 
   1. Copy files from the application bundle to the _AppData_ folder to access these files from code:
   
-  ```csharp
-  public async Task CopyWorkingFilesToAppData(string fileName) {
-      using Stream fileStream = await FileSystem.Current.OpenAppPackageFileAsync(fileName);
-      string targetFile = Path.Combine(FileSystem.Current.AppDataDirectory, fileName);
-      using FileStream outputStream = File.OpenWrite(targetFile);
-      fileStream.CopyTo(outputStream);
-  }
-  ```
+	  ```csharp
+	  public async Task CopyWorkingFilesToAppData(string fileName) {
+	      using Stream fileStream = await FileSystem.Current.OpenAppPackageFileAsync(fileName);
+	      string targetFile = Path.Combine(FileSystem.Current.AppDataDirectory, fileName);
+	      using FileStream outputStream = File.OpenWrite(targetFile);
+	      fileStream.CopyTo(outputStream);
+	  }
+	  ```
   
   1. Call the [RichEditDocumentServerExtensions.LoadDocumentAsync](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServerExtensions.LoadDocumentAsync.overloads?p=netstandard) method to load an email template:
   
-  ```csharp
-  async Task<RichEditDocumentServer> MailMergeAsync(EmailTemplate emailTemplate) {
-      string workingFilePath = Path.Combine(FileSystem.Current.AppDataDirectory, emailTemplate.DocumentSourcePath);
-      RichEditDocumentServer mergeRichProcessor = new RichEditDocumentServer();
-      await mergeRichProcessor.LoadDocumentAsync(workingFilePath);
-      // ...
-  }
-  ```
+	  ```csharp
+	  async Task<RichEditDocumentServer> MailMergeAsync(EmailTemplate emailTemplate) {
+	      string workingFilePath = Path.Combine(FileSystem.Current.AppDataDirectory, emailTemplate.DocumentSourcePath);
+	      RichEditDocumentServer mergeRichProcessor = new RichEditDocumentServer();
+	      await mergeRichProcessor.LoadDocumentAsync(workingFilePath);
+	      // ...
+	  }
+	  ```
   
   1. Assign the recipient data source to the [RichEditMailMergeOptions.DataSource](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditMailMergeOptions.DataSource?p=netstandard) property.
   
-  ```csharp
-  async Task<RichEditDocumentServer> MailMergeAsync(EmailTemplate emailTemplate) {
-      // ...
-      mergeRichProcessor.Document.Fields[0].Locked = true;
-      mergeRichProcessor.Options.MailMerge.DataSource = new List<object> { new { RecipientName = mailToCustomer.FirstName, SenderName = currentUserName} };
-      // ...
-  }
+	  ```csharp
+	  async Task<RichEditDocumentServer> MailMergeAsync(EmailTemplate emailTemplate) {
+	      // ...
+	      mergeRichProcessor.Document.Fields[0].Locked = true;
+	      mergeRichProcessor.Options.MailMerge.DataSource = new List<object> { new { RecipientName = mailToCustomer.FirstName, SenderName = currentUserName} };
+	      // ...
+	  }
   ```
   
   1. Call the [RichEditDocumentServer.MailMerge](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServer.MailMerge(DevExpress.XtraRichEdit.API.Native.Document)?p=netstandard) method to merge data and send the result to the specified [Document](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.Document?p=netstandard) instance.
   
-  ```csharp
-  async Task<RichEditDocumentServer> MailMergeAsync(EmailTemplate emailTemplate) {
-      // ...
-      MailMergeOptions myMergeOptions = mergeRichProcessor.Document.CreateMailMergeOptions();
-      RichEditDocumentServer resultDocumentProcessor = new RichEditDocumentServer();
-      resultDocumentProcessor.CreateNewDocument();
-      myMergeOptions.MergeMode = MergeMode.NewSection;
-      mergeRichProcessor.MailMerge(resultDocumentProcessor.Document);
-      return resultDocumentProcessor;
-  }
-  ```
+	  ```csharp
+	  async Task<RichEditDocumentServer> MailMergeAsync(EmailTemplate emailTemplate) {
+	      // ...
+	      MailMergeOptions myMergeOptions = mergeRichProcessor.Document.CreateMailMergeOptions();
+	      RichEditDocumentServer resultDocumentProcessor = new RichEditDocumentServer();
+	      resultDocumentProcessor.CreateNewDocument();
+	      myMergeOptions.MergeMode = MergeMode.NewSection;
+	      mergeRichProcessor.MailMerge(resultDocumentProcessor.Document);
+	      return resultDocumentProcessor;
+	  }
+	  ```
 ### Save Document as HTML
 
 Save the mail merge result as a document. Call the [SubDocument.GetHtmlText](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.SubDocument.GetHtmlText(DevExpress.XtraRichEdit.API.Native.DocumentRange-DevExpress.Office.Services.IUriProvider)?p=netstandard) method to convert the content to HTML.

@@ -6,6 +6,8 @@
 
 This example uses Mail Merge to send emails. Data placeholders in an email template obtain their values from database records. Mail Merge functionality is included in our [Office File API](https://www.devexpress.com/products/net/office-file-api/) subscription.
 
+<img src="https://user-images.githubusercontent.com/12169834/228828852-28a3feb6-e91c-4bd1-8945-2a2f80ae9e18.png" width="30%"/>
+
 ## Requirements
 
 * Register the DevExpress NuGet Gallery in Visual Studio to restore the NuGet packages used in this solution. See the following topic for more information: [Get Started with DevExpress Mobile UI for .NET MAUI](https://docs.devexpress.com/MAUI/403249/get-started).

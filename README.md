@@ -19,7 +19,7 @@ This example uses Mail Merge to send emails. Data placeholders in an email templ
 
 Use the [RichEditDocumentServer](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServer) class to load an email template and define a data source with recipients:
 
-  1. Copy files from the application bundle to the _AppData_ folder to access these files from code:
+1. Copy files from the application bundle to the _AppData_ folder to access these files from code:
   
 	  ```csharp
 	  public async Task CopyWorkingFilesToAppData(string fileName) {
@@ -30,7 +30,7 @@ Use the [RichEditDocumentServer](https://docs.devexpress.com/OfficeFileAPI/DevEx
 	  }
 	  ```
   
-  1. Call the [RichEditDocumentServerExtensions.LoadDocumentAsync](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServerExtensions.LoadDocumentAsync.overloads?p=netstandard) method to load an email template:
+1. Call the [RichEditDocumentServerExtensions.LoadDocumentAsync](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServerExtensions.LoadDocumentAsync.overloads?p=netstandard) method to load an email template:
   
 	  ```csharp
 	  async Task<RichEditDocumentServer> MailMergeAsync(EmailTemplate emailTemplate) {
@@ -41,8 +41,8 @@ Use the [RichEditDocumentServer](https://docs.devexpress.com/OfficeFileAPI/DevEx
 	  }
 	  ```
   
-  1. Assign the recipient data source to the [RichEditMailMergeOptions.DataSource](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditMailMergeOptions.DataSource?p=netstandard) property.
-  
+1. Assign the recipient data source to the [RichEditMailMergeOptions.DataSource](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditMailMergeOptions.DataSource?p=netstandard) property.
+
 	  ```csharp
 	  async Task<RichEditDocumentServer> MailMergeAsync(EmailTemplate emailTemplate) {
 	      // ...
@@ -50,9 +50,9 @@ Use the [RichEditDocumentServer](https://docs.devexpress.com/OfficeFileAPI/DevEx
 	      mergeRichProcessor.Options.MailMerge.DataSource = new List<object> { new { RecipientName = mailToCustomer.FirstName, SenderName = currentUserName} };
 	      // ...
 	  }
-  ```
+	```
   
-  1. Call the [RichEditDocumentServer.MailMerge](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServer.MailMerge(DevExpress.XtraRichEdit.API.Native.Document)?p=netstandard) method to merge data and send the result to the specified [Document](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.Document?p=netstandard) instance.
+1. Call the [RichEditDocumentServer.MailMerge](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServer.MailMerge(DevExpress.XtraRichEdit.API.Native.Document)?p=netstandard) method to merge data and send the result to the specified [Document](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.Document?p=netstandard) instance.
   
 	  ```csharp
 	  async Task<RichEditDocumentServer> MailMergeAsync(EmailTemplate emailTemplate) {
@@ -65,6 +65,7 @@ Use the [RichEditDocumentServer](https://docs.devexpress.com/OfficeFileAPI/DevEx
 	      return resultDocumentProcessor;
 	  }
 	  ```
+	  
 ### Save Document as HTML
 
 Save the mail merge result as a document. Call the [SubDocument.GetHtmlText](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.SubDocument.GetHtmlText(DevExpress.XtraRichEdit.API.Native.DocumentRange-DevExpress.Office.Services.IUriProvider)?p=netstandard) method to convert the content to HTML.

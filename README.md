@@ -1,3 +1,6 @@
+<!-- default badges list -->
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+<!-- default badges end -->
 # Mail Merge
 
 This example uses Mail Merge to send emails. Data placeholders in an email template obtain their values from database records. Mail Merge functionality is included in our [Office File API](https://www.devexpress.com/products/net/office-file-api/) subscription.

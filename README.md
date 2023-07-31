@@ -116,7 +116,7 @@ Call the [Email.ComposeAsync](https://learn.microsoft.com/en-us/dotnet/api/micro
 
 ## Documentation
 
-- [Spreadsheet Document API](https://docs.devexpress.com/OfficeFileAPI/14912/spreadsheet-document-api?p=netstandard)
+- [Word Processing API](https://docs.devexpress.com/OfficeFileAPI/17488/word-processing-document-api?p=netstandard)
 
 ## More Examples
 

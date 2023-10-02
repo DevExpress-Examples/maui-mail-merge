@@ -5,19 +5,19 @@
 <!-- default badges end -->
 # DevExpress .NET MAUI Controls - Send Template Messages with Mail Merge
 
-This example uses Mail Merge to send emails. Data placeholders in an email template obtain their values from database records. Mail Merge functionality is included in our [Office File API](https://www.devexpress.com/products/net/office-file-api/) subscription.
+This .NET MAUI example uses the DevExpress Office File API to generate email messages via mail merge operations. Data placeholders within the email template obtain data values from a database. The features outlined in this example require a license for the [Office File API](https://www.devexpress.com/products/net/office-file-api/). Our Office File API (Basic) is included in the following DevExpress Subscriptions: [Universal](https://www.devexpress.com/subscriptions/universal.xml), [DXperience](https://www.devexpress.com/subscriptions/dxperience.xml), and [Office File API](https://www.devexpress.com/products/net/office-file-api/). 
 
 <img src="https://user-images.githubusercontent.com/12169834/228828852-28a3feb6-e91c-4bd1-8945-2a2f80ae9e18.png" width="30%"/>
 
 ## Requirements
 
-* Register the DevExpress NuGet Gallery in Visual Studio to restore the NuGet packages used in this solution. See the following topic for more information: [Get Started with DevExpress Mobile UI for .NET MAUI](https://docs.devexpress.com/MAUI/403249/get-started).
+* Register the DevExpress NuGet Gallery in Visual Studio to restore the NuGet packages used in this solution. See the following topic for additional information: [Get Started with DevExpress Mobile UI for .NET MAUI](https://docs.devexpress.com/MAUI/403249/get-started).
 
-   You can also refer to the following YouTube video for more information on how to get started with the DevExpress .NET MAUI Controls: [Setting up a .NET MAUI Project](https://www.youtube.com/watch?v=juJvl5UicIQ).
+You can also refer to the following YouTube video for more information on how to get started with the DevExpress [Setting up a .NET MAUI Project](https://www.youtube.com/watch?v=juJvl5UicIQ).
 
-* To run this example, you need a DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml), [DXperience](https://www.devexpress.com/subscriptions/dxperience.xml), or [Office File API](https://www.devexpress.com/products/net/office-file-api/) subscription.  
-
+To run this example, you need to own/purchase a DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml), [DXperience](https://www.devexpress.com/subscriptions/dxperience.xml), or [Office File API](https://www.devexpress.com/products/net/office-file-api/) subscription.
 * The email client on your device should support HTML formatting. We tested the project with Outlook for Android and iOS.
+
 
 ## Implementation Details
 
@@ -25,6 +25,8 @@ This example uses Mail Merge to send emails. Data placeholders in an email templ
 ### Implement Mail Merge
 
 Use the [RichEditDocumentServer](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServer) class to load an email template and define a data source with recipients:
+
+Use the RichEditDocumentServer class to load an email template and define the data source (recipient information):
 
 1. Copy files from the application bundle to the _AppData_ folder to access these files from code:
   
@@ -37,7 +39,7 @@ Use the [RichEditDocumentServer](https://docs.devexpress.com/OfficeFileAPI/DevEx
 	  }
 	  ```
   
-1. Call the [RichEditDocumentServerExtensions.LoadDocumentAsync](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServerExtensions.LoadDocumentAsync.overloads?p=netstandard) method to load an email template:
+1. Call the [RichEditDocumentServerExtensions.LoadDocumentAsync](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServerExtensions.LoadDocumentAsync.overloads) method to load the email template:
   
 	  ```csharp
 	  async Task<RichEditDocumentServer> MailMergeAsync(EmailTemplate emailTemplate) {
@@ -59,7 +61,7 @@ Use the [RichEditDocumentServer](https://docs.devexpress.com/OfficeFileAPI/DevEx
 	  }
 	```
   
-1. Call the [RichEditDocumentServer.MailMerge](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServer.MailMerge(DevExpress.XtraRichEdit.API.Native.Document)?p=netstandard) method to merge data and send the result to the specified [Document](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.Document?p=netstandard) instance.
+1. Call the [RichEditDocumentServer.MailMerge](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServer.MailMerge(DevExpress.XtraRichEdit.API.Native.Document)?p=netstandard) method to merge data and send results to the specified [Document](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.Document?p=netstandard) instance.
   
 	  ```csharp
 	  async Task<RichEditDocumentServer> MailMergeAsync(EmailTemplate emailTemplate) {
@@ -75,10 +77,11 @@ Use the [RichEditDocumentServer](https://docs.devexpress.com/OfficeFileAPI/DevEx
 	  
 ### Save Document as HTML
 
-Save the mail merge result as a document. Call the [SubDocument.GetHtmlText](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.SubDocument.GetHtmlText(DevExpress.XtraRichEdit.API.Native.DocumentRange-DevExpress.Office.Services.IUriProvider)?p=netstandard) method to convert the content to HTML.
+Save mail merge results as a document. Call the [SubDocument.GetHtmlText](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.SubDocument.GetHtmlText(DevExpress.XtraRichEdit.API.Native.DocumentRange-DevExpress.Office.Services.IUriProvider)) method to convert content to HTML.
+
 ### Send Emails
 
-Call the [Email.ComposeAsync](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.applicationmodel.communication.email.composeasync?view=net-maui-7.0) method to send emails. You should specify required attributes in the following files: 
+Call the [Email.ComposeAsync](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.applicationmodel.communication.email.composeasync?view=net-maui-7.0) method to send emails. You should specify required attributes within the following files:
 
    _Android/AndroidManifest.xml_:
    
@@ -100,7 +103,7 @@ Call the [Email.ComposeAsync](https://learn.microsoft.com/en-us/dotnet/api/micro
 	</array>
   ```
 
-  Refer to the following topic on learn.microsoft.com for more information: [Email](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/communication/email?view=net-maui-7.0&tabs=ios).
+ Refer to the following Microsoft help topic for more information: [Email](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/communication/email?view=net-maui-7.0&tabs=ios).
 
 
 ## Files to Review

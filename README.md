@@ -13,9 +13,9 @@ This .NET MAUI example uses the DevExpress Office File API to generate email mes
 
 * Register the DevExpress NuGet Gallery in Visual Studio to restore the NuGet packages used in this solution. See the following topic for additional information: [Get Started with DevExpress Mobile UI for .NET MAUI](https://docs.devexpress.com/MAUI/403249/get-started).
 
-You can also refer to the following YouTube video for more information on how to get started with the DevExpress [Setting up a .NET MAUI Project](https://www.youtube.com/watch?v=juJvl5UicIQ).
+	You can also refer to the following YouTube video for more information on how to get started with the DevExpress [Setting up a .NET MAUI Project](https://www.youtube.com/watch?v=juJvl5UicIQ).
 
-To run this example, you need to own/purchase a DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml), [DXperience](https://www.devexpress.com/subscriptions/dxperience.xml), or [Office File API](https://www.devexpress.com/products/net/office-file-api/) subscription.
+* To run this example, you need to own/purchase a DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml), [DXperience](https://www.devexpress.com/subscriptions/dxperience.xml), or [Office File API](https://www.devexpress.com/products/net/office-file-api/) subscription.
 * The email client on your device should support HTML formatting. We tested the project with Outlook for Android and iOS.
 
 
@@ -24,9 +24,7 @@ To run this example, you need to own/purchase a DevExpress [Universal](https://w
 
 ### Implement Mail Merge
 
-Use the [RichEditDocumentServer](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServer) class to load an email template and define a data source with recipients:
-
-Use the RichEditDocumentServer class to load an email template and define the data source (recipient information):
+Use the [RichEditDocumentServer](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServer)  class to load an email template and define the data source (recipient information):
 
 1. Copy files from the application bundle to the _AppData_ folder to access these files from code:
   

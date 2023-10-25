@@ -3,9 +3,9 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1157166)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# DevExpress .NET MAUI Controls - Send Template Messages with Mail Merge
+# DevExpress .NET MAUI Controls - Send Template-base Messages Using Mail Merge Operations
 
-This .NET MAUI example uses the DevExpress Office File API to generate email messages via mail merge operations. Data placeholders within the email template obtain data values from a database. The features outlined in this example require a license for the [Office File API](https://www.devexpress.com/products/net/office-file-api/). Our Office File API (Basic) is included in the following DevExpress Subscriptions: [Universal](https://www.devexpress.com/subscriptions/universal.xml), [DXperience](https://www.devexpress.com/subscriptions/dxperience.xml), and [Office File API](https://www.devexpress.com/products/net/office-file-api/). 
+This .NET MAUI example uses the DevExpress Office File API to generate email messages using mail merge operations. Data placeholders within the email template obtain data values from a database. The features outlined in this example require a license for the [Office File API](https://www.devexpress.com/products/net/office-file-api/). Our Office File API (Basic) is included in the following DevExpress Subscriptions: [Universal](https://www.devexpress.com/subscriptions/universal.xml), [DXperience](https://www.devexpress.com/subscriptions/dxperience.xml), and [Office File API](https://www.devexpress.com/products/net/office-file-api/).  
 
 <img src="https://user-images.githubusercontent.com/12169834/228828852-28a3feb6-e91c-4bd1-8945-2a2f80ae9e18.png" width="30%"/>
 
@@ -15,8 +15,8 @@ This .NET MAUI example uses the DevExpress Office File API to generate email mes
 
 	You can also refer to the following YouTube video for more information on how to get started with the DevExpress [Setting up a .NET MAUI Project](https://www.youtube.com/watch?v=juJvl5UicIQ).
 
-* To run this example, you need to own/purchase a DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml), [DXperience](https://www.devexpress.com/subscriptions/dxperience.xml), or [Office File API](https://www.devexpress.com/products/net/office-file-api/) subscription.
-* The email client on your device should support HTML formatting. We tested the project with Outlook for Android and iOS.
+* To run this example, you need to own/purchase a DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml), [DXperience](https://www.devexpress.com/subscriptions/dxperience.xml), or [Office File API](https://www.devexpress.com/products/net/office-file-api/) Subscription.
+* The email client on your device must support HTML formatting. We tested this project with Outlook for Android and iOS.
 
 
 ## Implementation Details

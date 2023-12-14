@@ -32,11 +32,11 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
     <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-    <PackageReference Include="DevExpress.Document.Processor" Version="23.2.2-beta" />
-    <PackageReference Include="DevExpress.Data" Version="23.2.2-beta" />
-    <PackageReference Include="DevExpress.Maui.Controls" Version="23.2.2-beta" />
-    <PackageReference Include="DevExpress.Maui.Core" Version="23.2.2-beta" />
-    <PackageReference Include="DevExpress.Maui.DataGrid" Version="23.2.2-beta" />
+    <PackageReference Include="DevExpress.Document.Processor" Version="23.2.*" />
+    <PackageReference Include="DevExpress.Data" Version="23.2.*" />
+    <PackageReference Include="DevExpress.Maui.Controls" Version="23.2.*" />
+    <PackageReference Include="DevExpress.Maui.Core" Version="23.2.*" />
+    <PackageReference Include="DevExpress.Maui.DataGrid" Version="23.2.*" />
     <PackageReference Include="SQLite" Version="3.13.0" />
     <PackageReference Include="sqlite-net-pcl" Version="1.9.141-beta" />
     <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.4" />
@@ -48,10 +48,10 @@
     <PackageReference Include="SkiaSharp.HarfBuzz" Version="2.88.6" />
     <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="7.3.0" />
     <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
-    <PackageReference Include="DevExpress.RichEdit.Core" Version="23.2.2-beta" />
-    <PackageReference Include="DevExpress.DataVisualization.Core" Version="23.2.2-beta" />
-    <PackageReference Include="DevExpress.DataAccess" Version="23.2.2-beta" />
-    <PackageReference Include="DevExpress.Drawing.Skia" Version="23.2.2-beta" />
+    <PackageReference Include="DevExpress.RichEdit.Core" Version="23.2.*" />
+    <PackageReference Include="DevExpress.DataVisualization.Core" Version="23.2.*" />
+    <PackageReference Include="DevExpress.DataAccess" Version="23.2.*" />
+    <PackageReference Include="DevExpress.Drawing.Skia" Version="23.2.*" />
     <PackageReference Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'" Include="SkiaSharp.NativeAssets.iOS" Version="2.88.6" />
     <PackageReference Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'" Include="SkiaSharp.NativeAssets.Android" Version="2.88.6" />
   </ItemGroup>

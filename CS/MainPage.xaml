@@ -2,6 +2,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
     xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+    xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
     xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls" Shell.NavBarIsVisible="False"
     xmlns:viewModels="clr-namespace:MailMerge.ViewModel" ios:Page.UseSafeArea="true" x:Class="MailMerge.MainPage">
     <ContentPage.BindingContext>
@@ -46,7 +47,7 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <VerticalStackLayout>
-                                <dxco:SimpleButton BackgroundColor="{AppThemeBinding Light={StaticResource Popup_Background_Light}, Dark={StaticResource Popup_Background_Dark}}" CornerRadius="0" Command="{Binding Source={RelativeSource Mode=FindAncestorBindingContext, AncestorType={x:Type viewModels:MainViewModel}}, Path=SendTemplateEmailCommand}" CommandParameter="{Binding}" Text="{Binding Name}" TextColor="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray50}}" Padding="16,16,24,16" HorizontalContentAlignment="Start" PressedTextColor="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray50}}"/>
+                                <dx:DXButton BackgroundColor="{AppThemeBinding Light={StaticResource Popup_Background_Light}, Dark={StaticResource Popup_Background_Dark}}" CornerRadius="0" Command="{Binding Source={RelativeSource Mode=FindAncestorBindingContext, AncestorType={x:Type viewModels:MainViewModel}}, Path=SendTemplateEmailCommand}" CommandParameter="{Binding}" Content="{Binding Name}" TextColor="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray50}}" Padding="16,16,24,16" HorizontalContentAlignment="Start" PressedTextColor="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray50}}"/>
                                 <Border HeightRequest="2" BackgroundColor="{AppThemeBinding Light={StaticResource BottomSheet_Separator_Light}, Dark={StaticResource BottomSheet_Separator_Dark}}" HorizontalOptions="Fill" StrokeThickness="0"/>
                             </VerticalStackLayout>
                         </DataTemplate>

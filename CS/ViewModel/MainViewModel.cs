@@ -64,7 +64,7 @@ namespace MailMerge.ViewModel {
                     To = new List<string>() { mailToCustomer.Email }
                 };
                 try {
-                await Email.Default.ComposeAsync(message);
+                    await Email.Default.ComposeAsync(message);
                 }
                 catch (Exception e){
                     await App.Current.MainPage.DisplayAlert("Error", "Make sure your mail client is configured", "OK");
@@ -131,6 +131,4 @@ namespace MailMerge.ViewModel {
             }
         }
     }
-
-
 }

@@ -14,8 +14,6 @@ namespace MailMerge.Model {
     [Table("Customers")]
     public class Models  {
         byte[] photo;
-        ImageSource photoImageSource;
-
 
         [PrimaryKey, AutoIncrement, NotNull, Column("ID")]
         public int? ID {

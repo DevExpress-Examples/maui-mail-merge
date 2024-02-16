@@ -21,11 +21,11 @@
                     <dxg:TemplateColumn.DisplayTemplate>
                         <DataTemplate>
                             <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="*,*">
-                                <Image HeightRequest="40" WidthRequest="40" Source="{Binding Item.CachedImagePath}" VerticalOptions="Center" Margin="10" Grid.RowSpan="2"/>
-                                <HorizontalStackLayout Grid.Column="1" VerticalOptions="End">
+                                <dx:DXImage HeightRequest="40" WidthRequest="40" Source="{Binding Item.CachedImagePath}" VerticalOptions="Center" Margin="10" Grid.RowSpan="2"/>
+                                <dx:DXStackLayout Orientation="Horizontal" Grid.Column="1" VerticalOptions="End">
                                     <Label Text="{Binding Item.FirstName}" TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" FontAttributes="Bold"/>
                                     <Label Text="{Binding Item.LastName}" Margin="5,0,0,0" TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}" FontAttributes="Bold"/>
-                                </HorizontalStackLayout>
+                                </dx:DXStackLayout>
                                 <Label Text="{Binding Item.Company}" TextColor="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray300}}" LineBreakMode="TailTruncation" VerticalOptions="Start" Grid.Column="1" Grid.Row="1"/>
                             </Grid>
                         </DataTemplate>
@@ -40,20 +40,20 @@
             </dxg:DataGridView.SwipeItemAppearance>
         </dxg:DataGridView>
         <dxco:DXPopup x:Name="columnChooserPopup" BackgroundColor="{AppThemeBinding Light={StaticResource Popup_Background_Light}, Dark={StaticResource Popup_Background_Dark}}" IsOpen="{Binding IsTemplatesMenuVisible, Mode=TwoWay}" HorizontalOptions="Fill" Margin="30" CornerRadius="20">
-            <VerticalStackLayout Padding="24">
-                <dxco:DXImage Source="mail_light" VerticalOptions="Center" TintColor="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray200}}"/>
+            <dx:DXStackLayout Orientation="Vertical" Padding="24">
+                <dx:DXImage Source="mail_light" VerticalOptions="Center" TintColor="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray200}}"/>
                 <Label Text="Choose email template" HorizontalOptions="Center" FontSize="22" Padding="0,20,0,10"/>
                 <CollectionView Margin="0,11,0,0" HorizontalOptions="Fill" ItemsSource="{Binding EmailTemplates}" BackgroundColor="{AppThemeBinding Light={StaticResource Popup_Background_Light}, Dark={StaticResource Popup_Background_Dark}}" MaximumHeightRequest="148" VerticalScrollBarVisibility="Never">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <VerticalStackLayout>
+                            <dx:DXStackLayout Orientation="Vertical">
                                 <dx:DXButton BackgroundColor="{AppThemeBinding Light={StaticResource Popup_Background_Light}, Dark={StaticResource Popup_Background_Dark}}" CornerRadius="0" Command="{Binding Source={RelativeSource Mode=FindAncestorBindingContext, AncestorType={x:Type viewModels:MainViewModel}}, Path=SendTemplateEmailCommand}" CommandParameter="{Binding}" Content="{Binding Name}" TextColor="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray50}}" Padding="16,16,24,16" HorizontalContentAlignment="Start" PressedTextColor="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray50}}"/>
-                                <Border HeightRequest="2" BackgroundColor="{AppThemeBinding Light={StaticResource BottomSheet_Separator_Light}, Dark={StaticResource BottomSheet_Separator_Dark}}" HorizontalOptions="Fill" StrokeThickness="0"/>
-                            </VerticalStackLayout>
+                                <dx:DXSeparator BackgroundColor="{AppThemeBinding Light={StaticResource BottomSheet_Separator_Light}, Dark={StaticResource BottomSheet_Separator_Dark}}" HorizontalOptions="Fill"/>
+                            </dx:DXStackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-            </VerticalStackLayout>
+            </dx:DXStackLayout>
         </dxco:DXPopup>
     </Grid>
 </ContentPage>

@@ -1,24 +1,22 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-    xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
-    xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
-    xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls" Shell.NavBarIsVisible="False"
+    xmlns:dx="http://schemas.devexpress.com/maui"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls" Shell.NavBarIsVisible="False"
     xmlns:viewModels="clr-namespace:MailMerge.ViewModel" ios:Page.UseSafeArea="true" x:Class="MailMerge.MainPage">
     <ContentPage.BindingContext>
         <viewModels:MainViewModel/>
     </ContentPage.BindingContext>
     <Grid>
-        <dxg:DataGridView x:Name="dataGrid" ItemsSource="{Binding Contacts}" SelectionMode="None" ShowGroupedColumns="True">
-            <dxg:DataGridView.GroupRowAppearance>
-                <dxg:GroupRowAppearance BackgroundColor="Transparent" BottomBorderColor="Transparent" BorderColor="Transparent"/>
-            </dxg:DataGridView.GroupRowAppearance>
-            <dxg:DataGridView.CellAppearance>
-                <dxg:CellAppearance HorizontalLineThickness="0"/>
-            </dxg:DataGridView.CellAppearance>
-            <dxg:DataGridView.Columns>
-                <dxg:TemplateColumn FieldName="FirstName" Caption="All Contacts" SortOrder="Ascending" IsGrouped="True" GroupInterval="Alphabetical" GroupCaptionDisplayFormat="{}{1}">
-                    <dxg:TemplateColumn.DisplayTemplate>
+        <dx:DataGridView x:Name="dataGrid" ItemsSource="{Binding Contacts}" SelectionMode="None" ShowGroupedColumns="True">
+            <dx:DataGridView.GroupRowAppearance>
+                <dx:GroupRowAppearance BackgroundColor="Transparent" BottomBorderColor="Transparent" BorderColor="Transparent"/>
+            </dx:DataGridView.GroupRowAppearance>
+            <dx:DataGridView.CellAppearance>
+                <dx:CellAppearance HorizontalLineThickness="0"/>
+            </dx:DataGridView.CellAppearance>
+            <dx:DataGridView.Columns>
+                <dx:TemplateColumn FieldName="FirstName" Caption="All Contacts" SortOrder="Ascending" IsGrouped="True" GroupInterval="Alphabetical" GroupCaptionDisplayFormat="{}{1}">
+                    <dx:TemplateColumn.DisplayTemplate>
                         <DataTemplate>
                             <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="*,*">
                                 <dx:DXImage HeightRequest="40" WidthRequest="40" Source="{Binding Item.CachedImagePath}" VerticalOptions="Center" Margin="10" Grid.RowSpan="2"/>
@@ -29,17 +27,17 @@
                                 <Label Text="{Binding Item.Company}" TextColor="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray300}}" LineBreakMode="TailTruncation" VerticalOptions="Start" Grid.Column="1" Grid.Row="1"/>
                             </Grid>
                         </DataTemplate>
-                    </dxg:TemplateColumn.DisplayTemplate>
-                </dxg:TemplateColumn>
-            </dxg:DataGridView.Columns>
-            <dxg:DataGridView.EndSwipeItems>
-                <dxg:SwipeItem Image="{AppThemeBinding Light=mail_light, Dark=mail_dark}" Caption="Mail" FontColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}" Command="{Binding ShowTemplatesMenuCommand}"/>
-            </dxg:DataGridView.EndSwipeItems>
-            <dxg:DataGridView.SwipeItemAppearance>
-                <dxg:SwipeItemAppearance BackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray600}}"/>
-            </dxg:DataGridView.SwipeItemAppearance>
-        </dxg:DataGridView>
-        <dxco:DXPopup x:Name="columnChooserPopup" BackgroundColor="{AppThemeBinding Light={StaticResource Popup_Background_Light}, Dark={StaticResource Popup_Background_Dark}}" IsOpen="{Binding IsTemplatesMenuVisible, Mode=TwoWay}" HorizontalOptions="Fill" Margin="30" CornerRadius="20">
+                    </dx:TemplateColumn.DisplayTemplate>
+                </dx:TemplateColumn>
+            </dx:DataGridView.Columns>
+            <dx:DataGridView.EndSwipeItems>
+                <dx:GridSwipeItem Image="{AppThemeBinding Light=mail_light, Dark=mail_dark}" Caption="Mail" FontColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}" Command="{Binding ShowTemplatesMenuCommand}"/>
+            </dx:DataGridView.EndSwipeItems>
+            <dx:DataGridView.SwipeItemAppearance>
+                <dx:SwipeItemAppearance BackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray600}}"/>
+            </dx:DataGridView.SwipeItemAppearance>
+        </dx:DataGridView>
+        <dx:DXPopup x:Name="columnChooserPopup" BackgroundColor="{AppThemeBinding Light={StaticResource Popup_Background_Light}, Dark={StaticResource Popup_Background_Dark}}" IsOpen="{Binding IsTemplatesMenuVisible, Mode=TwoWay}" HorizontalOptions="Fill" Margin="30" CornerRadius="20">
             <dx:DXStackLayout Orientation="Vertical" Padding="24">
                 <dx:DXImage Source="mail_light" VerticalOptions="Center" TintColor="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray200}}"/>
                 <Label Text="Choose email template" HorizontalOptions="Center" FontSize="22" Padding="0,20,0,10"/>
@@ -54,6 +52,6 @@
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </dx:DXStackLayout>
-        </dxco:DXPopup>
+        </dx:DXPopup>
     </Grid>
 </ContentPage>

@@ -6,7 +6,7 @@
 
 # DevExpress .NET MAUI Controls & Office File API - Merge Operations
 
-This repository contains projects that allow you to use Office File API to perform merge operations over text documents:
+This repository contains projects that allow you to use Office File API to perform merge operations with text documents:
 
 * [Send Template-base Messages Using Mail Merge Operations](/CS/mail-merge/)
 * [Merge Editor Data to a Templated Document](/CS/editor-data-merge/)

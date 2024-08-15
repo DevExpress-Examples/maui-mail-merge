@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
+        <OutputType>Exe</OutputType>
+        <UseMaui>true</UseMaui>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <SingleProject>true</SingleProject>
+        <RootNamespace>MauiOFAMerge</RootNamespace>
+
+        <!-- Display name -->
+        <ApplicationTitle>MauiOFAMerge</ApplicationTitle>
+
+        <!-- App Identifier -->
+        <ApplicationId>com.companyname.MauiOFAMerge</ApplicationId>
+        <ApplicationIdGuid>AB958C5A-1263-4B1C-933C-470498F1D590</ApplicationIdGuid>
+        <!-- Versions -->
+        <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+        <ApplicationVersion>1</ApplicationVersion>
+
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- App Icon -->
+        <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+        <!-- Splash Screen -->
+        <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+        <!-- Images -->
+        <MauiImage Include="Resources\Images\*" />
+
+        <!-- Custom Fonts -->
+        <MauiFont Include="Resources\Fonts\*" />
+
+        <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+        <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+        <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+        <PackageReference Include="DevExpress.Maui.Controls" Version="24.1.4" />
+        <PackageReference Include="DevExpress.Maui.Core" Version="24.1.4" />
+        <PackageReference Include="DevExpress.Maui.Charts" Version="24.1.4" />
+        <PackageReference Include="DevExpress.Maui.CollectionView" Version="24.1.4" />
+        <PackageReference Include="DevExpress.Maui.Editors" Version="24.1.4" />
+        <PackageReference Include="DevExpress.Maui.DataGrid" Version="24.1.4" />
+        <PackageReference Include="DevExpress.Maui.Scheduler" Version="24.1.4" />
+        <PackageReference Include="DevExpress.Data" Version="24.1.4" />
+        
+        <PackageReference Include="DevExpress.Document.Processor" Version="24.1.4" />
+        <PackageReference Include="DevExpress.Drawing.Skia" Version="24.1.4" />
+    </ItemGroup>
+</Project>

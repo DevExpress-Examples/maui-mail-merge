@@ -1,37 +1,35 @@
 <!-- default badges list -->
+![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/621277459/24.1.3%2B)
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1157166)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
+# DevExpress .NET MAUI Controls - Merge Editor Data to a Templated Document
 
-# DevExpress .NET MAUI Controls & Office File API - Merge Operations
+This .NET MAUI example uses the DevExpress Office File API to generate email messages using mail merge operations. Data placeholders within the email template obtain data values from a database. The features outlined in this example require a license for the [Office File API](https://www.devexpress.com/products/net/office-file-api/). Our Office File API (Basic) is included in the following DevExpress Subscriptions: [Universal](https://www.devexpress.com/subscriptions/universal.xml), [DXperience](https://www.devexpress.com/subscriptions/dxperience.xml), and [Office File API](https://www.devexpress.com/products/net/office-file-api/).  
 
-This repository contains projects that allow you to use Office File API to perform merge operations with text documents:
+![DevExpress .NET MAUI & Office File API - Merge editor data to a templated .docx document](media/merge-preview.png)
 
-* [Send Template-base Messages Using Mail Merge Operations](/CS/mail-merge/)
-* [Merge Editor Data to a Templated Document](/CS/editor-data-merge/)
+## Implementation Details
 
+This example uses [RichEditDocumentServer](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServer?p=netframework) functionality to merge editor data to a templated .docx document.
 
-## Requirements
+## Files to Review
 
-* Register the DevExpress NuGet Gallery in Visual Studio to restore the NuGet packages used in this solution. See the following topic for additional information: [Get Started with DevExpress Mobile UI for .NET MAUI](https://docs.devexpress.com/MAUI/403249/get-started).
-
-    You can also refer to the following YouTube video for more information on how to get started with the DevExpress [Setting up a .NET MAUI Project](https://www.youtube.com/watch?v=juJvl5UicIQ).
-
-* To run examples in this repository, you need to own/purchase a DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml), [DXperience](https://www.devexpress.com/subscriptions/dxperience.xml), or [Office File API](https://www.devexpress.com/products/net/office-file-api/) Subscription.
-
+<!-- default file list -->
+* [MainPage.xaml](./MainPage.xaml)
+* [MainViewModel.cs](./MainPage.xaml.cs)
+<!-- default file list end -->
 
 ## Documentation
 
-* [Office File API Support](https://docs.devexpress.com/MAUI/404434/office-file-api-support)
 * [Word Processing Document API](https://docs.devexpress.com/OfficeFileAPI/17488/word-processing-document-api)
-
 
 ## More Examples
 
+* [DevExpress Components for .NET MAUI - Demo App](https://github.com/DevExpress-Examples/maui-demo-app)
 * [DevExpress .NET MAUI Data Grid - Export Data](https://github.com/DevExpress-Examples/maui-data-grid/tree/HEAD/CS/ExportGridData)
 * [DevExpress Data Grid for .NET MAUI - Import Excel Data](https://github.com/DevExpress-Examples/maui-data-grid/tree/HEAD/CS/ImportExcelData)
-
 
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?

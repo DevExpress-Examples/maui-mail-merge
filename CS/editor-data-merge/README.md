@@ -8,7 +8,7 @@
 
 This .NET MAUI example uses the DevExpress Office File API to generate email messages using mail merge operations. Data placeholders within the email template obtain data values from a database. The features outlined in this example require a license for the [Office File API](https://www.devexpress.com/products/net/office-file-api/). Our Office File API (Basic) is included in the following DevExpress Subscriptions: [Universal](https://www.devexpress.com/subscriptions/universal.xml), [DXperience](https://www.devexpress.com/subscriptions/dxperience.xml), and [Office File API](https://www.devexpress.com/products/net/office-file-api/).  
 
-![DevExpress .NET MAUI & Office File API - Merge editor data to a templated .docx document](media/merge-preview.png)
+<img src="media/merge-preview.png" width="60%" alt="DevExpress .NET MAUI & Office File API - Merge editor data to a templated .docx document"/>
 
 ## Implementation Details
 

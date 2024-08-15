@@ -23,6 +23,7 @@ This example uses [RichEditDocumentServer](https://docs.devexpress.com/OfficeFil
 
 ## Documentation
 
+* [Use Office File API to Implement Document Merge Operations](https://docs.devexpress.com/MAUI/405084/office-file-api-support/document-merge)
 * [Word Processing Document API](https://docs.devexpress.com/OfficeFileAPI/17488/word-processing-document-api)
 
 ## More Examples

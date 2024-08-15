@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.0.31612.314
+VisualStudioVersion = 17.11.35125.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailMerge", "MailMerge.csproj", "{7D12FF8B-6025-4F39-B4E6-631D1A12F92D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailMerge", "mail-merge\MailMerge.csproj", "{353DB270-7D1F-4EC9-A9C1-6D2CCDE8F402}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiOFAMerge", "mail-merge-simplified\MauiOFAMerge.csproj", "{315D209A-1A87-4134-A004-1A6B03B26313}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,17 +13,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7D12FF8B-6025-4F39-B4E6-631D1A12F92D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D12FF8B-6025-4F39-B4E6-631D1A12F92D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D12FF8B-6025-4F39-B4E6-631D1A12F92D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{7D12FF8B-6025-4F39-B4E6-631D1A12F92D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D12FF8B-6025-4F39-B4E6-631D1A12F92D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D12FF8B-6025-4F39-B4E6-631D1A12F92D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{353DB270-7D1F-4EC9-A9C1-6D2CCDE8F402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{353DB270-7D1F-4EC9-A9C1-6D2CCDE8F402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{353DB270-7D1F-4EC9-A9C1-6D2CCDE8F402}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{353DB270-7D1F-4EC9-A9C1-6D2CCDE8F402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{353DB270-7D1F-4EC9-A9C1-6D2CCDE8F402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{353DB270-7D1F-4EC9-A9C1-6D2CCDE8F402}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{315D209A-1A87-4134-A004-1A6B03B26313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{315D209A-1A87-4134-A004-1A6B03B26313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{315D209A-1A87-4134-A004-1A6B03B26313}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{315D209A-1A87-4134-A004-1A6B03B26313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{315D209A-1A87-4134-A004-1A6B03B26313}.Release|Any CPU.Build.0 = Release|Any CPU
+		{315D209A-1A87-4134-A004-1A6B03B26313}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+		SolutionGuid = {D86A9D63-2003-4A87-AEE2-555512803B5E}
 	EndGlobalSection
 EndGlobal

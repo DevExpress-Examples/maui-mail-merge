@@ -5,7 +5,7 @@ VisualStudioVersion = 17.11.35125.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailMerge", "mail-merge\MailMerge.csproj", "{353DB270-7D1F-4EC9-A9C1-6D2CCDE8F402}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiOFAMerge", "mail-merge-simplified\MauiOFAMerge.csproj", "{315D209A-1A87-4134-A004-1A6B03B26313}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiOFAMerge", "editor-data-merge\MauiOFAMerge.csproj", "{315D209A-1A87-4134-A004-1A6B03B26313}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

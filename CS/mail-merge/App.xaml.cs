@@ -7,7 +7,10 @@ public partial class App : Application {
     public App() {
         InitializeComponent();
         DBContactService.Instance = new DBContactService("contacts.db");
-        MainPage = new AppShell();
+    }
+
+    protected override Window CreateWindow(IActivationState activationState) {
+        return new Window(new AppShell());
     }
 
     public class DBContactService {

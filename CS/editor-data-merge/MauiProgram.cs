@@ -1,6 +1,5 @@
 ﻿using DevExpress.Maui;
 using DevExpress.Maui.Core;
-using Microsoft.Maui.Controls.Compatibility.Hosting;
 
 namespace MauiOFAMerge {
     public static class MauiProgram {
@@ -16,7 +15,6 @@ namespace MauiOFAMerge {
                 .UseDevExpressEditors()
                 .UseDevExpressDataGrid()
                 .UseDevExpressScheduler()
-                .UseMauiCompatibility()
                 .ConfigureFonts(fonts => {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("roboto-regular.ttf", "Roboto");

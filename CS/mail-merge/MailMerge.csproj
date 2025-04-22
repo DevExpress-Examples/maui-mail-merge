@@ -37,7 +37,7 @@
     <PackageReference Include="DevExpress.Data" Version="24.2.*" />
     <PackageReference Include="DevExpress.Maui.Controls" Version="24.2.*" />
     <PackageReference Include="DevExpress.Maui.Core" Version="24.2.*" />
-    <PackageReference Include="DevExpress.Maui.DataGrid" Version="24.2.*" />
+    <PackageReference Include="DevExpress.Maui.DataGrid" Version="24.2.*" /> 
     <PackageReference Include="SQLite" Version="3.13.0" />
     <PackageReference Include="sqlite-net-pcl" Version="1.9.141-beta" />
     <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.4" />

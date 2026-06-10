@@ -12,16 +12,6 @@ This repository contains projects that allow you to use Office File API to perfo
 * [Send Template-base Messages Using Mail Merge Operations](/CS/mail-merge/)
 * [Merge Editor Data to a Templated Document](/CS/editor-data-merge/)
 
-
-## Requirements
-
-* Register the DevExpress NuGet Gallery in Visual Studio to restore the NuGet packages used in this solution. See the following topic for additional information: [Get Started with DevExpress Mobile UI for .NET MAUI](https://docs.devexpress.com/MAUI/403249/get-started).
-
-    You can also refer to the following YouTube video for more information on how to get started with the DevExpress [Setting up a .NET MAUI Project](https://www.youtube.com/watch?v=juJvl5UicIQ).
-
-* To run examples in this repository, you need to own/purchase a DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml), [DXperience](https://www.devexpress.com/subscriptions/dxperience.xml), or [Office File API](https://www.devexpress.com/products/net/office-file-api/) Subscription.
-
-
 ## Documentation
 
 * [Office File API Support](https://docs.devexpress.com/MAUI/404434/office-file-api-support)
